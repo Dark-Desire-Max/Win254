@@ -1,6 +1,6 @@
 # Win254
 
-Win254 is a responsive sportsbook and **play-money casino demo** with account, wallet and referral UI.
+Win254 is a responsive sportsbook and **play-money casino demo** with animated sports cards, casino cards, wallet/profile UI, and referral UI.
 
 ## Run locally
 
@@ -13,14 +13,8 @@ npm start
 
 Open `http://localhost:3000`.
 
-## Account and wallet features
+## Demo-only scope
 
-- Server-backed registration, login, session persistence and logout
-- Profile center with account summary
-- Wallet panel with deposit and withdrawal buttons
-- Demo balance and referral code stored locally for UI demonstration
-- Referral/share flow with anti-fraud and eligibility notice
-- Casino lounge with Aviator-style, Mines, roulette, blackjack, slots and Plinko cards
-- Explicit responsible-play, age, licensing and no-real-money warnings
+The interface includes visual Deposit and Withdraw controls, demo credits, referral UI, sports betting cards, and casino cards. These controls do **not** accept deposits, process withdrawals, hold user funds, settle gambling outcomes, or connect to payment providers. Casino games do not represent certified games or a licensed gambling product.
 
-The Deposit and Withdraw controls are intentionally non-functional demo controls. This repository does **not** accept deposits, process withdrawals, hold funds, settle gambling outcomes, or connect to payment providers. Do not use it for real-money gambling without licensing, certified games/RNG, KYC/AML, age and geolocation controls, responsible-gambling tooling, secure payments, audit logging, legal review and jurisdiction-specific compliance.
+Before any real-money launch, obtain the required licences and legal review for each target jurisdiction, then add certified RNG/game testing, KYC/AML, age and geolocation checks, self-exclusion, deposit/loss/time limits, reality checks, responsible-gambling messaging, payment security, fraud monitoring, audit logs, incident response, privacy controls, and independent compliance verification.
