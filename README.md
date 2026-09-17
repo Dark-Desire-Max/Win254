@@ -1,31 +1,25 @@
 # Win254
 
-A polished, responsive sportsbook interface with a real server-backed authentication system.
-
-## Authentication setup
-
-1. Install Node.js 20 or later.
-2. Copy `.env.example` to `.env`.
-3. Replace `JWT_SECRET` with a long random value (at least 32 characters).
-4. Install and start the app:
-
-```bash
-npm install
-npm start
-```
-
-Open `http://localhost:3000`. User accounts are stored in `data/win254.sqlite`, passwords are hashed with bcrypt, and sessions use an HTTP-only, signed JWT cookie. The `data/` directory and `.env` should not be committed.
-
-The API provides `POST /api/auth/register`, `POST /api/auth/login`, `GET /api/auth/me`, and `POST /api/auth/logout`, with authentication rate limiting and security headers.
+A polished responsive sportsbook and play-money casino demo.
 
 ## Included
 
-- Responsive sportsbook landing page
-- Animated hero, live ticker, light/dark theme and mobile navigation
+- Animated sportsbook landing page with live ticker and themes
 - Football, basketball, tennis and rugby sample markets
 - Interactive odds selection, bet slip and potential-return calculator
-- Real registration, login, session persistence and logout
-- Secure password hashing, HTTP-only cookies, rate limiting and SQLite storage
-- Demo-mode disclaimer: no real-money wagers or payments
+- Server-backed registration, login, session persistence and logout
+- Casino lounge with demo-only Aviator-style crash, Mines, roulette, blackjack, slots and Plinko game cards
+- Responsible-play messaging and explicit no-real-money disclaimer
 
-For production, add HTTPS, a managed database, email verification, password reset, CSRF/origin protections, 2FA, KYC/AML, age/geolocation checks, audit logging, monitoring, backups and jurisdiction-specific legal/compliance review.
+## Run locally
+
+```bash
+npm install
+cp .env.example .env
+# Set a JWT_SECRET with at least 32 random characters
+npm start
+```
+
+Open `http://localhost:3000`.
+
+Casino games in this repository are presentation/demo experiences only. They do not generate random outcomes, accept stakes, process deposits or withdrawals, or represent a licensed gambling product. Production use requires independent game certification, secure RNG, age/geolocation checks, KYC/AML, responsible-gambling controls, payments compliance, licensing and jurisdiction-specific legal review.
