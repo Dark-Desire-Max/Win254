@@ -1,26 +1,31 @@
 # Win254
 
-A polished, responsive sportsbook interface for exploring sports, events, markets and bet slips.
+A polished, responsive sportsbook interface with a real server-backed authentication system.
+
+## Authentication setup
+
+1. Install Node.js 20 or later.
+2. Copy `.env.example` to `.env`.
+3. Replace `JWT_SECRET` with a long random value (at least 32 characters).
+4. Install and start the app:
+
+```bash
+npm install
+npm start
+```
+
+Open `http://localhost:3000`. User accounts are stored in `data/win254.sqlite`, passwords are hashed with bcrypt, and sessions use an HTTP-only, signed JWT cookie. The `data/` directory and `.env` should not be committed.
+
+The API provides `POST /api/auth/register`, `POST /api/auth/login`, `GET /api/auth/me`, and `POST /api/auth/logout`, with authentication rate limiting and security headers.
 
 ## Included
 
 - Responsive sportsbook landing page
-- Animated hero, live ticker, floating score card and scroll reveals
-- Light/dark theme toggle with local preference persistence
-- Mobile navigation drawer and keyboard-friendly modal dismissal
-- Sports navigation and event filtering
+- Animated hero, live ticker, light/dark theme and mobile navigation
 - Football, basketball, tennis and rugby sample markets
-- Interactive odds selection and bet slip
-- Stake input and potential-return calculator
-- Login/register modal flows
-- Promotions, responsible-play messaging and demo-mode disclaimers
+- Interactive odds selection, bet slip and potential-return calculator
+- Real registration, login, session persistence and logout
+- Secure password hashing, HTTP-only cookies, rate limiting and SQLite storage
+- Demo-mode disclaimer: no real-money wagers or payments
 
-## Run locally
-
-No build step is required. Open `index.html` in a browser or serve the directory with any static server:
-
-```bash
-python3 -m http.server 8080
-```
-
-This is a front-end demo. It does not accept deposits, process withdrawals, settle wagers, or connect to real-money providers. A production deployment needs licensed operators, age/geolocation checks, KYC/AML, responsible-gambling controls, secure back-end services, audited odds/settlement logic, payment compliance and jurisdiction-specific legal review.
+For production, add HTTPS, a managed database, email verification, password reset, CSRF/origin protections, 2FA, KYC/AML, age/geolocation checks, audit logging, monitoring, backups and jurisdiction-specific legal/compliance review.
