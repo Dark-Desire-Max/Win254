@@ -5,13 +5,15 @@ A polished, responsive sportsbook interface for exploring sports, events, market
 ## Included
 
 - Responsive sportsbook landing page
+- Animated hero, live ticker, floating score card and scroll reveals
+- Light/dark theme toggle with local preference persistence
+- Mobile navigation drawer and keyboard-friendly modal dismissal
 - Sports navigation and event filtering
 - Football, basketball, tennis and rugby sample markets
 - Interactive odds selection and bet slip
 - Stake input and potential-return calculator
 - Login/register modal flows
 - Promotions, responsible-play messaging and demo-mode disclaimers
-- Accessible semantic HTML and mobile navigation foundation
 
 ## Run locally
 
