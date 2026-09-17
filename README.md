@@ -1,25 +1,26 @@
 # Win254
 
-A polished responsive sportsbook and play-money casino demo.
-
-## Included
-
-- Animated sportsbook landing page with live ticker and themes
-- Football, basketball, tennis and rugby sample markets
-- Interactive odds selection, bet slip and potential-return calculator
-- Server-backed registration, login, session persistence and logout
-- Casino lounge with demo-only Aviator-style crash, Mines, roulette, blackjack, slots and Plinko game cards
-- Responsible-play messaging and explicit no-real-money disclaimer
+Win254 is a responsive sportsbook and **play-money casino demo** with account, wallet and referral UI.
 
 ## Run locally
 
 ```bash
 npm install
 cp .env.example .env
-# Set a JWT_SECRET with at least 32 random characters
+# Set JWT_SECRET to at least 32 random characters
 npm start
 ```
 
 Open `http://localhost:3000`.
 
-Casino games in this repository are presentation/demo experiences only. They do not generate random outcomes, accept stakes, process deposits or withdrawals, or represent a licensed gambling product. Production use requires independent game certification, secure RNG, age/geolocation checks, KYC/AML, responsible-gambling controls, payments compliance, licensing and jurisdiction-specific legal review.
+## Account and wallet features
+
+- Server-backed registration, login, session persistence and logout
+- Profile center with account summary
+- Wallet panel with deposit and withdrawal buttons
+- Demo balance and referral code stored locally for UI demonstration
+- Referral/share flow with anti-fraud and eligibility notice
+- Casino lounge with Aviator-style, Mines, roulette, blackjack, slots and Plinko cards
+- Explicit responsible-play, age, licensing and no-real-money warnings
+
+The Deposit and Withdraw controls are intentionally non-functional demo controls. This repository does **not** accept deposits, process withdrawals, hold funds, settle gambling outcomes, or connect to payment providers. Do not use it for real-money gambling without licensing, certified games/RNG, KYC/AML, age and geolocation controls, responsible-gambling tooling, secure payments, audit logging, legal review and jurisdiction-specific compliance.
