@@ -3,43 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Win254 — a modern sports betting experience." />
-  <title>Win254 — Sports, odds and live action</title>
+  <meta name="description" content="Win254 — sports betting and casino demo experience." />
+  <title>Win254 — Sports & casino</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="enhancements.css" />
+  <link rel="stylesheet" href="account.css" />
+  <link rel="stylesheet" href="casino.css" />
+  <link rel="stylesheet" href="motion.css" />
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#home" aria-label="Win254 home"><span class="brand-mark">W</span><span>win<span class="accent">254</span></span></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
-      <a class="active" href="#home">Home</a><a href="#sports">Sports</a><a href="#live">Live</a><a href="#promotions">Promotions</a>
+      <a class="active" href="#home">Home</a><a href="#sports">Sports</a><a href="#casino">Casino</a><a href="#promotions">Promotions</a>
     </nav>
     <div class="top-actions"><button class="icon-button" id="searchButton" aria-label="Search">⌕</button><button class="outline-button" id="loginButton">Log in</button><button class="primary-button" id="registerButton">Join now</button><button class="menu-button" id="menuButton" aria-label="Open menu">☰</button></div>
   </header>
 
   <main id="home">
     <section class="hero shell">
-      <div class="hero-copy"><span class="eyebrow">THE EDGE IS YOURS</span><h1>Play the moment.<br><span>Own the odds.</span></h1><p>Follow every fixture, find your angle and make every match count.</p><div class="hero-actions"><a class="primary-button large" href="#sports">Explore markets <span>→</span></a><button class="text-button" id="howItWorks">How it works <span>▶</span></button></div><div class="trust-row"><span>✓ Secure account</span><span>✓ Fast settlements</span><span>✓ Responsible play</span></div></div>
+      <div class="hero-copy">
+        <span class="eyebrow">THE EDGE IS YOURS</span>
+        <h1>Play the moment.<br><span>Own the odds.</span></h1>
+        <p>Sportsbook, casino and live-action features in one modern betting experience.</p>
+        <div class="hero-actions"><a class="primary-button large" href="#sports">Explore markets <span>→</span></a><button class="text-button" id="howItWorks">How it works <span>▶</span></button></div>
+        <div class="trust-row"><span>✓ secure account</span><span>✓ instant wallet</span><span>✓ responsible play</span></div>
+      </div>
       <div class="hero-art"><div class="glow"></div><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="hero-score"><span class="live-dot">LIVE</span><strong>2 — 1</strong><small>ARSENAL&nbsp;&nbsp; 78'</small></div><div class="hero-label">BET<br><b>SMARTER</b></div></div>
     </section>
 
     <section class="shell quick-bar" aria-label="Quick links"><button class="quick active" data-filter="all"><span>✦</span> All sports</button><button class="quick" data-filter="Football"><span>⚽</span> Football</button><button class="quick" data-filter="Basketball"><span>◉</span> Basketball</button><button class="quick" data-filter="Tennis"><span>◒</span> Tennis</button><button class="quick" data-filter="Rugby"><span>◆</span> Rugby</button><button class="quick" data-filter="Esports"><span>⌁</span> Esports</button></section>
 
     <section class="shell content-grid" id="sports">
-      <div class="events-column"><div class="section-heading"><div><span class="eyebrow">TODAY'S ACTION</span><h2>Popular events</h2></div><div class="heading-controls"><button class="filter-button" id="dateButton">Today⌄</button><button class="filter-button" id="moreButton">More filters</button></div></div><div class="notice"><span>⚡</span><div><b>Power play boost</b><small>Get enhanced odds on selected pre-match events.</small></div><button>View picks →</button></div><div id="eventList" class="event-list"></div></div>
-      <aside class="bet-slip" id="betSlip"><div class="slip-head"><div><span class="eyebrow">YOUR BETS</span><h2>Bet slip <span id="betCount">0</span></h2></div><button class="close-slip" id="clearSlip">Clear all</button></div><div class="slip-tabs"><button class="selected" data-slip="bets">Bets <span id="tabBetCount">0</span></button><button data-slip="open">Open bets</button></div><div id="slipBody" class="slip-body"><div class="empty-slip"><div class="empty-icon">＋</div><b>Your bet slip is empty</b><p>Tap any odds to add a selection.<br>Your picks will appear here.</p></div></div><div class="slip-footer"><label class="stake-label">Stake <span id="balanceLabel">Balance: KSh 0.00</span></label><div class="stake-input"><span>KSh</span><input id="stake" type="number" min="0" value="100" /></div><div class="total-row"><span>Potential return</span><strong id="potentialReturn">KSh 0.00</strong></div><button class="primary-button full" id="placeBet">Log in to place bet</button><small class="slip-disclaimer">Demo mode: no real-money wagers are processed.</small></div></aside>
+      <div class="events-column">
+        <div class="section-heading"><div><span class="eyebrow">TODAY'S ACTION</span><h2>Popular events</h2></div><div class="heading-controls"><button class="filter-button" id="dateButton">Today⌄</button><button class="filter-button" id="moreButton">More filters</button></div></div>
+        <div class="notice"><span>⚡</span><div><b>Power play boost</b><small>Get enhanced odds on selected pre-match events.</small></div><button>View picks →</button></div>
+        <div id="eventList" class="event-list"></div>
+      </div>
+      <aside class="bet-slip" id="betSlip">
+        <div class="slip-head"><div><span class="eyebrow">YOUR BETS</span><h2>Bet slip <span id="betCount">0</span></h2></div><button class="close-slip" id="clearSlip">Clear all</button></div>
+        <div class="slip-tabs"><button class="selected" data-slip="bets">Bets <span id="tabBetCount">0</span></button><button data-slip="open">Open bets</button></div>
+        <div id="slipBody" class="slip-body"><div class="empty-slip"><div class="empty-icon">＋</div><b>Your bet slip is empty</b><p>Tap any odds to add a selection.<br>Your picks will appear here.</p></div></div>
+        <div class="slip-footer"><label class="stake-label">Stake <span id="balanceLabel">Balance: KSh 0.00</span></label><div class="stake-input"><span>KSh</span><input id="stake" type="number" min="0" value="100" /></div><div class="total-row"><span>Potential return</span><strong id="potentialReturn">KSh 0.00</strong></div><button class="primary-button full" id="placeBet">Log in to place bet</button><small class="slip-disclaimer">Demo mode: no real-money wagers are processed.</small></div>
+      </aside>
     </section>
 
     <section class="shell promo-section" id="promotions"><div><span class="eyebrow">MORE WAYS TO PLAY</span><h2>Make your first move count.</h2><p>Discover offers made for fans who know their game.</p></div><div class="promo-card"><span class="promo-tag">WELCOME OFFER</span><strong>100% match<br><em>up to KSh 2,500</em></strong><button class="dark-button" id="promoButton">Claim offer →</button></div><div class="promo-card purple"><span class="promo-tag">WEEKEND BOOST</span><strong>Extra <em>15%</em><br>on accumulators</strong><button class="dark-button">See details →</button></div></section>
+
+    <section class="casino-section shell" id="casino">
+      <div class="section-heading casino-heading"><div><span class="eyebrow">CASINO LOUNGE</span><h2>Play beyond the pitch</h2><p>Instant-play casino, crash-style games and classic favourites.</p></div><span class="demo-pill">DEMO MODE · KSh 10,000</span></div>
+      <div class="casino-grid" id="casinoGrid"></div>
+    </section>
   </main>
+
   <footer class="footer"><div class="shell footer-inner"><a class="brand" href="#home"><span class="brand-mark">W</span><span>win<span class="accent">254</span></span></a><p>© 2026 Win254. Demo sportsbook experience.</p><div><a href="#responsible">Responsible play</a><a href="#terms">Terms</a><a href="#privacy">Privacy</a></div></div></footer>
 
-  <div class="modal-backdrop" id="modal"><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose">×</button><span class="eyebrow" id="modalEyebrow">WELCOME TO WIN254</span><h2 id="modalTitle">Create your account</h2><p id="modalText">Use demo mode to explore the complete betting experience.</p><form id="accountForm"><label>Email address<input type="email" placeholder="you@example.com" required /></label><label>Password<input type="password" placeholder="At least 8 characters" minlength="8" required /></label><button class="primary-button full" type="submit">Continue</button></form><small>By continuing, you confirm you are of legal age in your jurisdiction. Please play responsibly.</small></div></div>
+  <div class="modal-backdrop" id="modal"><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose">×</button><span class="eyebrow" id="modalEyebrow">WELCOME TO WIN254</span><h2 id="modalTitle">Create your account</h2><p id="modalText">Use demo mode to explore the complete betting experience.</p><form id="accountForm"><label>Email address<input type="email" name="email" placeholder="you@example.com" required /></label><label>Password<input type="password" name="password" placeholder="At least 8 characters" minlength="8" required /></label><button class="primary-button full" type="submit">Continue</button></form><small>By continuing, you confirm you are of legal age in your jurisdiction. Please play responsibly.</small></div></div>
   <div class="toast" id="toast"></div>
+
+  <script src="auth.js"></script>
   <script src="app.js"></script>
+  <script src="casino.js"></script>
+  <script src="account.js"></script>
   <script src="enhancements.js"></script>
+  <script src="motion.js"></script>
 </body>
 </html>
